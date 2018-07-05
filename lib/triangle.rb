@@ -10,7 +10,7 @@ class Triangle
       return :scalene
     end
   end
-  def tri_invalid(side1, side 2, side3)
+  def tri_invalid(side1, side2, side3)
     if side1 <= 0 || side2 <= 0 || side3 <= 0
       return true
     elsif side1 + side2 < side3
