@@ -1,5 +1,10 @@
 class Triangle
-  def kind(side1, side2, side3)
+  attr_accessor :side1, :side2, :side3
+  def initalize(side1, side2, side3)
+    @side1 = side1
+    @side2 = side2
+    @side3 = side3
+  def kind
     if tri_invalid
       raise TriangleError
     elsif side1 == side2 && side1 == side3
