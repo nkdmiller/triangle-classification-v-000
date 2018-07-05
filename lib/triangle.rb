@@ -1,5 +1,5 @@
 class Triangle
-  def kind(side1, side 2, side 3)
+  def kind(side1, side2, side3)
     if tri_invalid
       raise TriangleError
     elsif side1 == side2 && side1 == side3
@@ -13,11 +13,11 @@ class Triangle
   def tri_invalid(side1, side 2, side3)
     if side1 <= 0 || side2 <= 0 || side3 <= 0
       return true
-    elsif side1 + side2 < side 3
+    elsif side1 + side2 < side3
       return true
-    elsif side2 + side3 < side 1
+    elsif side2 + side3 < side1
       return true
-    elsif side1 + side3 < side 2
+    elsif side1 + side3 < side2
       return true
     else
       return false
