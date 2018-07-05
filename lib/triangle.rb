@@ -19,11 +19,11 @@ class Triangle
   def tri_invalid
     if self.side1 <= 0 || self.side2 <= 0 || self.side3 <= 0
       return true
-    elsif self.side1 + self.side2 < self.side3
+    elsif self.side1 + self.side2 <= self.side3
       return true
-    elsif self.side2 + self.side3 < self.side1
+    elsif self.side2 + self.side3 <= self.side1
       return true
-    elsif self.side1 + self.side3 < self.side2
+    elsif self.side1 + self.side3 <= self.side2
       return true
     else
       return false
