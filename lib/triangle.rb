@@ -4,25 +4,26 @@ class Triangle
     @side1 = side1
     @side2 = side2
     @side3 = side3
+  end
   def kind
     if tri_invalid
       raise TriangleError
-    elsif side1 == side2 && side1 == side3
+    elsif self.side1 == self.side2 && self.side1 == self.side3
       return :equilateral
-    elsif (side1 == side2 && side1 != side3) || (side2 == side3 && side2 != side1) || (side1 == side3 && side1 != side2)
+    elsif (self.side1 == self.side2 && self.side1 != self.side3) || (self.side2 == self.side3 && self.side2 != self.side1) || (self.side1 == self.side3 && self.side1 != self.side2)
       return :isosceles
     else
       return :scalene
     end
   end
-  def tri_invalid(side1, side2, side3)
-    if side1 <= 0 || side2 <= 0 || side3 <= 0
+  def tri_invalid(self.side1, self.side2, self.side3)
+    if self.side1 <= 0 || self.side2 <= 0 || self.side3 <= 0
       return true
-    elsif side1 + side2 < side3
+    elsif self.side1 + self.side2 < self.side3
       return true
-    elsif side2 + side3 < side1
+    elsif self.side2 + self.side3 < self.side1
       return true
-    elsif side1 + side3 < side2
+    elsif self.side1 + self.side3 < self.side2
       return true
     else
       return false
